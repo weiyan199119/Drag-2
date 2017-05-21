@@ -1,4 +1,4 @@
- function (id) {
+ function drag(id) {
  	var obj = document.getElementById(id);
  	var disx = 0;
  	var dixY = 0;
@@ -13,6 +13,12 @@
  			obj.style.top = ev.clientY-disY+'px';
  			
  		}
+ 		 document.onmouseup = function(ev){
+ 		 	document.onmousemove = null;
+ 		 	document.onmouseup = null;
+ 		 }
  	}
+
+ 	return false
 
  }
